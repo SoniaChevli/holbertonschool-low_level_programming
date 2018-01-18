@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - go through each letter and print it
- * return: print all letters a-z in lowercase
+ * Return: letters if the number is positive. 0 otherwise
  */
 int main(void)
 {

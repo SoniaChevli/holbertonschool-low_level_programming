@@ -6,10 +6,10 @@
  */
 int main(void)
 {
- int bytesizechar;
- char bytesizeint;
- long bytesizelong;
- longlong bytesizelonglong;
+ int bytesizeint;
+ char bytesizechar;
+ long int bytesizelong;
+ long long int bytesizelonglong;
  float bytesizefloat;
 
  printf("Size of a char: %d byte(s)\n", sizeof(bytesizechar));

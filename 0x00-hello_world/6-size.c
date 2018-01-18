@@ -12,10 +12,10 @@ int main(void)
  longlong bytesizelonglong;
  float bytesizefloat;
 
-  printf("Size of a char: %d byte(s)\n", bytesizechar);
-  printf("Size of an int: %d byte(s)\n", bytesizeint);
-  printf("Size of a long int: %d byte(s)\n", bytesizelong);
-  printf("Size of a long long int: %d byte(s)\n", bytesizelonglong);
-  printf("Size of a float: %d byte(s)\n", bytesizefloat);
+ printf("Size of a char: %d byte(s)\n", sizeof(bytesizechar));
+ printf("Size of an int: %d byte(s)\n", sizeof(bytesizeint));
+ printf("Size of a long int: %d byte(s)\n", sizeof(bytesizelong));
+ printf("Size of a long long int: %d byte(s)\n", sizeof(bytesizelonglong));
+ printf("Size of a float: %d byte(s)\n", sizeof(bytesizefloat));
 return (0);
 }

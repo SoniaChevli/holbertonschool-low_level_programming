@@ -6,7 +6,7 @@
 int main(void)
 {
 	int n = 0;
-	int i = 0;
+	int i = 1;
 
 	while (n <= 9)
 	{

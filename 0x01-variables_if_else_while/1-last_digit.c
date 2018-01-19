@@ -4,20 +4,22 @@
 
 /**
  * main - find the last digit of random number
- * Return: print what that last digit is and how it relates to 5
+ * Return: print last digit. otherwise 0
  */
 
 int main(void)
 {
-int n;
+	int n;
+	int x;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n % 10 > 5)
-printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
-if (n % 10 == 0)
-printf("Last digit of %d is %d and is zero\n", n, n % 10);
-if (n % 10 < 6 && n % 10 != 0)
-printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
-return (0);
+	x  = n % 10;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (x > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, x);
+	else if (x == 0)
+		printf("Last digit of %d is %d and is zero\n", n, x);
+	else
+		printf("Last digit of %d is %d and is less than 6 and not zero\n", n, x);
+	return (0);
 }

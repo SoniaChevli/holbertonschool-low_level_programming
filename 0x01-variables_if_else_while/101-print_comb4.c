@@ -9,6 +9,7 @@ int main(void)
 	int n = 0;
 	int i = 1;
 	int x = 2;
+
 	while (n <= 7)
 	{
 		while (i <= 8)
@@ -18,7 +19,7 @@ int main(void)
 				putchar('0' + n);
 				putchar('0' + i);
 				putchar('0' + x);
-				if ((n+i+x) != 24)
+				if ((n + i + x) != 24)
 				{
 					putchar(',');
 					putchar(' ');

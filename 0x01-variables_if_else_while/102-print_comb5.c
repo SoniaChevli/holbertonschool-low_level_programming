@@ -12,13 +12,13 @@ int main(void)
 	int x = 0;
 	int y = 0;
 
-	while(n <=9)
+	while (n <= 9)
 	{
-		while(i <= 9)
+		while (i <= 9)
 		{
-			while(x <= 9)
+			while (x <= 9)
 			{
-				while(y <= 9)
+				while (y <= 9)
 				{
 					putchar('0' + i);
 					putchar('0' + n);

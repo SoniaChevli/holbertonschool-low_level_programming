@@ -2,7 +2,9 @@
 /**
  * print_sign-print the sign of the number
  * Return: 1 or 0 or -1
-*/
+ * @n: random number n
+ *
+ */
 
 int print_sign(int n)
 {

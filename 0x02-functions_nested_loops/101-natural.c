@@ -4,20 +4,24 @@
  */
 int main(void)
 {
-	int x = 1024;
+	int x = 0;
 	int y = 0;
+	int z = 1;
 
-	while (x != 0)
+	while (y <= 1024)
 	{
-		x = x / 3;
-		y = y + x;
+		y = z * 3;
+		x = y + x;
+		z++;
 	}
-	x = 1024;
-	while (x != 0)
+	z = 1;
+	y = 0;
+	while (y <= 1024)
 	{
-		x = x / 5;
-		y = x + y;
+		y = z * 5;
+		x = x + y;
+		z++;
 	}
-	printf("%d\n", y);
+	printf("%d\n", x);
 	return (0);
 }

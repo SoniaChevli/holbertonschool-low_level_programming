@@ -20,8 +20,10 @@ void print_times_table(int n)
 				if (y <= 9)
 				{
 					if (i != 0)
-						_putchar(' ');
+					{
+_putchar(' ');
 					_putchar(' ');
+					}
 					_putchar ('0' + y);
 				}
 				else  if (y <= 99)

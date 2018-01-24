@@ -14,6 +14,7 @@ int main(void)
 		x = y + x;
 		z++;
 	}
+	x = x - y;
 	z = 1;
 	y = 0;
 	while (y <= 1024)
@@ -22,6 +23,7 @@ int main(void)
 		x = x + y;
 		z++;
 	}
+	x = x - y;
 	printf("%d\n", x);
 	return (0);
 }

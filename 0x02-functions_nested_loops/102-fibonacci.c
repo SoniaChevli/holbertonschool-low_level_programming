@@ -7,13 +7,13 @@ int main(void)
 	long int z;
 	long int count = 0;
 
-	printf("0, 1, ");
+	printf("0, 1, ,");
 	while (count <= 48)
 	{
 		z = x + y;
 		printf("%li", z);
 		if (count != 48)
-			printf(", ");
+			printf(", ,");
 		x = y;
 		y = z;
 		count++;

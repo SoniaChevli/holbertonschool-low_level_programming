@@ -8,7 +8,7 @@ int main(void)
 	long int count = 0;
 
 	printf("0, 1, ");
-	while (count <= 50)
+	while (count <= 48)
 	{
 		z = x + y;
 		printf("%li", z);

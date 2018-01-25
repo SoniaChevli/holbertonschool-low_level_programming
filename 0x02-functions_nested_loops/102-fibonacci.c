@@ -11,11 +11,11 @@ int main(void)
 	long int count = 0;
 
 	printf("1, 2, ");
-	while (count <= 48)
+	while (count < 48)
 	{
 		z = x + y;
 		printf("%li", z);
-		if (count != 48)
+		if (count != 47)
 			printf(", ");
 		x = y;
 		y = z;

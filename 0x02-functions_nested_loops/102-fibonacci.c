@@ -12,7 +12,7 @@ int main(void)
 	{
 		z = x + y;
 		printf("%li", z);
-		if (count != 50)
+		if (count != 48)
 			printf(", ");
 		x = y;
 		y = z;

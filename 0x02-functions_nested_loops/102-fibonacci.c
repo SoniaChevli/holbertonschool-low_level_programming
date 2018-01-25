@@ -2,19 +2,22 @@
 
 int main(void)
 {
-	int x = 0;
-	int y = 1;
-	int z;
-	int count = 0;
-	putchar('0' + x);
-	putchar('0' + y);
-	while (count <= 50);
+	long int x = 0;
+	long int y = 1;
+	long int z;
+	long int count = 0;
+
+	printf("0, 1, ");
+	while (count <= 50)
 	{
 		z = x + y;
-		putchar('0' + z);
+		printf("%li", z);
+		if (count != 50)
+			printf(", ");
 		x = y;
 		y = z;
-		count ++;
+		count++;
 	}
+	printf("\n");
 	return (0);
 }

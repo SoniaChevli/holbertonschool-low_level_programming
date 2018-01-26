@@ -2,20 +2,18 @@
 
 int main(void)
 {
-	int bignumber = 612852475143;
+	long int bignumber = 612852475143;
 	int a = 2;
 
 	while (bignumber != a)
 	{
-		if (bignumber % a != 0)
-			break;
+		if (bignumber % a == 0)
+			bignumber /= a;
 		else
 		{
-			bignumber = bignumber / a;
 			a++;
 		}
 	}
-	printf("%d\n", bignumber);
-
+	printf("%li\n", bignumber);
 	return (0);
 }

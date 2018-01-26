@@ -10,6 +10,8 @@ void print_triangle(int size)
 	int spaces;
 	int hash;
 
+	if (size == 0)
+                _putchar('\n');
 	while (x <= size)
 	{
 		spaces = size - x;
@@ -27,6 +29,4 @@ void print_triangle(int size)
 		x++;
 		_putchar('\n');
 	}
-	if (size == 0)
-		_putchar('\n');
 }

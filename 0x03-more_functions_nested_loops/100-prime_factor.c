@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int bignumber = 1231952;
+	int bignumber = 612852475143;
 	int a = 2;
 
 	while (bignumber != a)

@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - print biggest prime factor of bignum
+ * Return: big number otherwise 0.
+ */
 int main(void)
 {
 	long int bignumber = 612852475143;

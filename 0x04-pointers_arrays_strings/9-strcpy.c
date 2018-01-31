@@ -1,18 +1,19 @@
 #include "holberton.h"
 /**
- **_strcpy -move the contents of string src to dest
+ **_strcpy - move the contents of string src to dest
+ *Return: character;
  *
  *@dest: destination pointer
  *@src: source string
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int place = 0;
 
-	while (src[i] != '\0')
+	while (src[place] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		dest[place] = src[place];
+		place++;
 	}
 	return (dest);
 }

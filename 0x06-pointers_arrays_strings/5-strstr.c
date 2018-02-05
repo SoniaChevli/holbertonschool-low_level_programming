@@ -30,8 +30,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 
 		if (length == x - 1)
-			return (needle);
-
+		{
+			haystack = &haystack[i];
+			return (haystack);
+		}
 		x = 0;
 		i++;
 	}

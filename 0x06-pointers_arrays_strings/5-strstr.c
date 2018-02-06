@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 
 	while (needle[length] != '\0')
 		length++;
-
+	length--;
 	while (haystack[i] != '\0')
 	{
 		count = i;
@@ -31,8 +31,7 @@ char *_strstr(char *haystack, char *needle)
 
 		if (length == x - 1)
 		{
-			haystack = &haystack[i];
-			return (haystack);
+			return (haystack + i);
 		}
 		x = 0;
 		i++;

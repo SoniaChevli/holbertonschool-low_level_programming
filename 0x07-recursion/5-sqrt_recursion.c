@@ -7,14 +7,17 @@
  */
 int _sqrt_recursion(int n)
 {
-	int x  = _sqrt_recursion(n);
-	int y;
-
-	y = n / x;
-	if (x == 0)
-		return (-1);
-	if (y == x)
-		return (x);
-	else
-		return (_sqrt_recursion(n - 1));
+	return (innerfunc(x));
 }
+int innerfunc(int x, int n)
+	{
+		int y;
+
+		y = n / x;
+		if (x == 0)
+			return (-1);
+		if (y == x)
+			return (x);
+		else
+			return (_sqrt_recursion(n - 1));
+	}

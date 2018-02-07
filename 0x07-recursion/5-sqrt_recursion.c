@@ -7,7 +7,7 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (innerfunc(x));
+	return (innerfunc(int x - 1, n));
 }
 int innerfunc(int x, int n)
 	{
@@ -19,5 +19,5 @@ int innerfunc(int x, int n)
 		if (y == x)
 			return (x);
 		else
-			return (_sqrt_recursion(n - 1));
+			return (_sqrt_recursion(n));
 	}

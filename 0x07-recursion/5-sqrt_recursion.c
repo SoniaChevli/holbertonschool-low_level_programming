@@ -7,13 +7,14 @@
  */
 int _sqrt_recursion(int n)
 {
-	int x;
+	int x  = _sqrt_recursion(n);
+	int y;
 
-	if (n == 0)
+	y = n / x;
+	if (x == 0)
 		return (-1);
-	x = n / _sqrt_recursion(n + 1);
-	if (x == n)
+	if (y == x)
 		return (x);
 	else
-		return(_sqrt_recursion(n + 1));
+		return (_sqrt_recursion(n - 1));
 }

@@ -5,17 +5,15 @@
  *
  *@n: number to find square root
  *@x: is n but decremented
-*/
+ */
 
 int innerfunc(int x, int n)
 {
-	 int y;
-
 	if (x <= 0)
 		return (-1);
-	y = n / x;
-
-	if (y == x && n % x == 0)
+	if (x * x < n)
+		return (-1);
+	if (x * x == n)
 		return (x);
 	else
 		return (innerfunc(x - 1, n));
@@ -28,5 +26,5 @@ int innerfunc(int x, int n)
 
 int _sqrt_recursion(int n)
 {
-return (innerfunc(n, n));
+	return (innerfunc(n, n));
 }

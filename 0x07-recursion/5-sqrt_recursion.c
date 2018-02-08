@@ -9,7 +9,7 @@
 
 int innerfunc(int x, int n)
 {
-	int y;
+	 int y;
 
 	if (x <= 0)
 		return (-1);

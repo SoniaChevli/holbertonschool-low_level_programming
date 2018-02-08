@@ -11,8 +11,6 @@ int innerfunc(int x, int n)
 {
 	if (x <= 0)
 		return (-1);
-	if (x * x < n)
-		return (-1);
 	if (x * x == n)
 		return (x);
 	else

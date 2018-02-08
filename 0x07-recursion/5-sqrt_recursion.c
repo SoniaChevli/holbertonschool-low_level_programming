@@ -9,12 +9,15 @@
 
 int innerfunc(int x, int n)
 {
-	if (x <= 0)
+	if (x > n / x)
 		return (-1);
 	if (x * x == n)
 		return (x);
-	else
-		return (innerfunc(x - 1, n));
+
+	if (n < 1)
+		return (-1);
+
+	return (innerfunc(x + 1, n));
 }
 /**
  * _sqrt_recursion - finds narural square root
@@ -24,5 +27,6 @@ int innerfunc(int x, int n)
 
 int _sqrt_recursion(int n)
 {
-	return (innerfunc(n, n));
+
+	return (innerfunc(1, n));
 }

@@ -15,6 +15,19 @@ int outerfun(char *s, int length, int x)
 		return (outerfun(s, length - 1, x + 1));
 	return (0);
 }
+int length(char *s)
+{
+	if (*s != '\0')
+        {
+                s++;
+                return (1 + _strlen_recursion(s));
+
+        }
+        else
+        {
+                return (0);
+        }
+}
 /**
  * is_palindrome - is a string palindrome
  * Return: string and length
@@ -23,11 +36,8 @@ int outerfun(char *s, int length, int x)
  */
 int is_palindrome(char *s)
 {
-	int length = 0;
-	int x = 0;
-
-	while (s[length] != '\0')
-		length++;
-	length--;
+	return (length(s));
 	return (outerfun(s, length, x));
 }
+
+i

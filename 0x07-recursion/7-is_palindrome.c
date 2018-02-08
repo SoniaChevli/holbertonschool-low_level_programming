@@ -15,18 +15,24 @@ int outerfun(char *s, int length, int x)
 		return (outerfun(s, length - 1, x + 1));
 	return (0);
 }
+/**
+ *length - finds length of string
+ * Return: length
+ *
+ *@s: string
+ */
 int length(char *s)
 {
 	if (*s != '\0')
-        {
-                s++;
-                return (1 + _strlen_recursion(s));
+	{
+		s++;
+		return (1 + length(s));
 
-        }
-        else
-        {
-                return (0);
-        }
+	}
+	else
+	{
+		return (0);
+	}
 }
 /**
  * is_palindrome - is a string palindrome
@@ -36,8 +42,8 @@ int length(char *s)
  */
 int is_palindrome(char *s)
 {
-	return (length(s));
-	return (outerfun(s, length, x));
-}
+	int y = length(s) - 1;
 
-i
+
+	return (outerfun(s, y, 0));
+}

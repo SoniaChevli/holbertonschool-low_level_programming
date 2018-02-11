@@ -1,0 +1,93 @@
+!<arch>
+0-isupper.o/    1518357627  1000  1000  100664  47        `
+#include "holberton.h"
+
+int _isupper(int c)
+{
+}
+0-memset.o/     1518357664  1000  1000  100664  75        `
+#include "holberton.h"
+
+char *_memset(char *s, char b, unsigned int n);
+{
+}
+0-strcat.o/     1518357691  1000  1000  100664  63        `
+#include "holberton.h"
+char *_strcat(char *dest, char *src)
+{
+}
+100-atoi.o/     1518357805  1000  1000  100664  22        `
+int _atoi(char *s)
+{
+}1-isdigit.o/    1518357717  1000  1000  100664  47        `
+#include "holberton.h"
+
+int _isdigit(int c)
+{
+}
+1-memcpy.o/     1518357743  1000  1000  100664  80        `
+#include "holberton.h"
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+}1-strncat.o/    1518357773  1000  1000  100664  71        `
+#include "holberton.h"
+char *_strncpy(char *dest, char *src, int n)
+{
+}
+2-strchr.o/     1518357824  1000  1000  100664  34        `
+char *_strchr(char *s, char c)
+{
+}2-strlen.o/     1518357858  1000  1000  100664  47        `
+#inlcude "holberton.h"
+int _strlen(char *s)
+{
+}
+2-strncpy.o/    1518357889  1000  1000  100664  71        `
+#include "holberton.h"
+char *_strncpy(char *dest, char *src, int n)
+{
+}
+3-islower.o/    1518357916  1000  1000  100664  46        `
+#inlcude "holberton.h"
+int _islower(int c)
+{
+}3-puts.o/       1518357951  1000  1000  100664  46        `
+#inlcude "holberton.h"
+void _puts(char *s)
+{
+}3-strcmp.o/     1518357981  1000  1000  100664  58        `
+#include "holberton.h"
+int _strcmp(char *s1, char *s2)
+{
+}3-strspn.o/     1518358016  1000  1000  100664  71        `
+#include "holberton.h"
+unsigned int _strspn(char *s, char *accept);
+{
+}
+4-isalpha.o/    1518358045  1000  1000  100664  46        `
+#include "holberton.h"
+int _isalpha(int c)
+{
+}4-strpbrk.o/    1518358077  1000  1000  100664  64        `
+#include "holberton.h"
+char *_strpbrk(char *s, char *accept)
+{
+}5-strstr.o/     1518358105  1000  1000  100664  70        `
+#include "holberton.h"
+char *_strstr(char *haystack, char *needle)
+{
+}6-abs.o/        1518358131  1000  1000  100664  42        `
+#inlcude "holberton.h"
+int _abs(int n)
+{
+}9-strcpy.o/     1518358162  1000  1000  100664  71        `
+#include "holberton.h"
+char *_strncpy(char *dest, char *src, int n)
+{
+}
+_putchar.o/     1518358191  1000  1000  100664  47        `
+#include "holberton.h"
+int _putchar(char c)
+{
+}

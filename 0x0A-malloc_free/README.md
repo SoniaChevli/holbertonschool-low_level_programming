@@ -1,4 +1,4 @@
-##malloc, free
+## malloc, free
 The objective of this directory is to practice malloc and learn:
 * the difference between automatic and dynamic allocation
 * what is malloc and free and how to use them

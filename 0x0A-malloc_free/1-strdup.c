@@ -13,6 +13,9 @@ char *_strdup(char *str)
 	int i = 0;
 	int x = 0;
 
+	if (str == 0)
+		return (0);
+
 	while (str[i] != '\0')
 	{
 		i++;
@@ -20,7 +23,7 @@ char *_strdup(char *str)
 
 	cpstr = (char *)malloc(sizeof(char) * i + 1);
 
-	if (str == 0)
+	if (cpstr == 0)
 		return (0);
 
 	while (str[x] != '\0')

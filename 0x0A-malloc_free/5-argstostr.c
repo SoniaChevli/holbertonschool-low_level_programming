@@ -14,6 +14,9 @@ char *argstostr(int ac, char **av)
 	int y = 0;
 	char *willy;
 
+	if (ac == 0 || av == 0)
+		return (0);
+
 	for (i = 0; i < ac; i++)
 	{
 		for (x = 0; av[i][x] != '\0'; x++)

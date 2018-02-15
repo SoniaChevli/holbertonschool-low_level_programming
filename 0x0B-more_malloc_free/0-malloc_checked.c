@@ -12,7 +12,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *arr;
 
-	arr = malloc(b * sizeof(int));
+	arr = malloc(b);
 	if (arr == 0)
 		exit(98);
 	return (arr);

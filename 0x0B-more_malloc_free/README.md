@@ -1,4 +1,4 @@
-#Malloc, free
+# Malloc, free
 * the objective of this directory is to practice more malloc and free
 
 ## 0-malloc_checked.c

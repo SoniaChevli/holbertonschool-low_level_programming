@@ -10,18 +10,18 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *arr;
+	char *arr;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (0);
 
-	arr = malloc(nmemb * size + 1);
+	arr = malloc(nmemb * size);
 
 	if (arr == 0)
 		return (0);
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 	{
 		arr[i] = 0;
 	}

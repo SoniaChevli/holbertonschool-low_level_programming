@@ -11,12 +11,19 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
+	int i;
 
 	if (nmemb == 0 || size == 0)
 		return (0);
 
 	arr = malloc(nmemb * size);
+
 	if (arr == 0)
 		return (0);
+
+	for (i = 0; arr[i] != '\0'; i++)
+	{
+		arr[i] = 0;
+	}
 	return (arr);
 }

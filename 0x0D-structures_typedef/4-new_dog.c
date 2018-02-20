@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int length = 0;
+
 	while (s[length] != '\0')
 		length++;
 	return (length);
@@ -53,7 +54,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	arrown = malloc(sizeof(char) * ownlen + 1);
 
-	if (newdog->owner == 0)
+	if (arrown == 0)
 		return (0);
 	for (i = 0; owner[i] != '\0'; i++)
 		arrown[i] = owner[i];

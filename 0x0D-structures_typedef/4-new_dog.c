@@ -44,7 +44,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (arrnam == 0)
 	{
-		free(arrnam);
+		free(dog_t);
 		return (0);
 	}
 
@@ -58,7 +58,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (arrown == 0)
 	{
 		free(arrnam);
-		free(arrown);
+		free(dog_t);
 		return (0);
 	}
 	for (i = 0; owner[i] != '\0'; i++)

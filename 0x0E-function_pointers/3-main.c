@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	int a;
 	int b;
 	int result;
+	int (*p)(int, int);
 
 	if (argc != 4)
 	{
@@ -26,11 +27,10 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(100);
 	}
-	int (*p)(int, int);
 
 	p = get_op_func(argv[2]);
 
-	if (p == 0)
+	if (p == NULL)
 	{
 		printf("Error\n");
 		exit(99);

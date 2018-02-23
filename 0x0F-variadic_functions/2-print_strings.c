@@ -14,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *conversion;
 
-	va_start (x, n);
+	va_start(x, n);
 	for (i = 0; i < n; i++)
 	{
 		conversion = va_arg(x, char *);
@@ -27,7 +27,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		printf("%s", conversion);
 
-		if (i != n-1 && separator != NULL)
+		if (i != n - 1 && separator != NULL)
 			printf("%c", *separator);
 	}
 	printf("\n");

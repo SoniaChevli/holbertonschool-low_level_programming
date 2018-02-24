@@ -1,79 +1,68 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * pint_all - prints anything
  * @format: list of types of arguments passed
  *
  *Return: nothing
  */
+void _intprint(va_list fill)
+{
+        printf("%d", va_arg(fill, int));
+}
+void _stringprint(va_list fill)
+{
+	char *copy = va_arg(fill, char *);
+
+        if (copy != NULL)
+	{
+                printf("%s", copy);
+		return;
+	}
+        printf("nil");
+}
+void _floatprint(va_list fill)
+{
+        printf("%f", va_arg(fill, double));
+}
+void _charprint(va_list fill)
+{
+        printf("%c", va_arg(fill, int));
+}
+
+
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	int boo = 0;
+	int x = 0;
+	char *seperator = "";
 	va_list args;
-	int length = 0;
-	char *z;
-
-	while (format[i] != 0)
-	{
-		switch (format[i])
-		{
-		case 'i':
-			length++;
-			break;
-
-		case 'c':
-			length++;
-			break;
-
-		case 'f':
-			length++;
-			break;
-
-		case 's':
-			length++;
-			break;
-		}
-		i++;
-	}
-	i = 0;
 
 
+	ops arr[] = {
+		{"i", _intprint},
+		{"s", _stringprint},
+		{"f", _floatprint},
+		{"c", _charprint},
+		{NULL, NULL}
+	};
 	va_start(args, format);
-
-	while (format[i] != 0)
+	while (format[i] != '\0')
 	{
-		boo = 0;
-		switch (format[i])
+		while (arr[x].ch != NULL)
 		{
-		case 'i' :
-			printf("%d", va_arg(args, int));
-			boo = 1;
-			break;
-		case 'c' :
-			printf("%c", va_arg(args, int));
-
-			boo = 1;
-			break;
-		case 'f' :
-			printf("%f", va_arg(args, double));
-			boo = 1;
-			break;
-		case 's' :
-			z = va_arg(args, char *);
-			if (z != 0)
-				printf("%s", z);
-			else
-				printf("nil");
-			boo = 1;
-
-			break;
+			if (*(arr[x].ch) == format[i])
+			{
+				printf("%s", seperator);
+				(arr[i].f)(args);
+				seperator = ", ";
+			}
+			x++;
 		}
-		if (i != length && boo == 1)
-			printf(", ");
 		i++;
+		x = 0;
 	}
 	printf("\n");
+	va_end(args);
 }

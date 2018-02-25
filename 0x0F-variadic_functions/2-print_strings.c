@@ -25,9 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		conversion = va_arg(x, char *);
 
 		if (conversion == NULL)
-		{
-			printf("nil");
-		}
+			printf("(nil)");
 
 		printf("%s", conversion);
 

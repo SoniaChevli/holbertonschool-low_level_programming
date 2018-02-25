@@ -1,6 +1,12 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
-typedef struct ops{
+/**
+ * struct ops - holds a string and function pointer
+ *@ch: character
+ *@f: function that prints a variable type
+ */
+typedef struct ops
+{
 	char *ch;
 	void (*f)(va_list);
 } ops;

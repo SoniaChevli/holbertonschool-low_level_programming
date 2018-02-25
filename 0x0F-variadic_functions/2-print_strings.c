@@ -27,7 +27,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (conversion == NULL)
 		{
 			printf("nil");
-			return;
 		}
 
 		printf("%s", conversion);

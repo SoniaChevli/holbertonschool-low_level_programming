@@ -8,6 +8,12 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q
+:w
+:vsplit 3-calc.h
+:split 3-op_functions.c
+:split 3-get_op_func.c
+:X
 
 # Search String History (newest to oldest):
 
@@ -18,14 +24,168 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+"1	LINE	0
+	#include "variadic_functions.h"
+"2	LINE	0
+	#include <stdarg.h>
+"3	LINE	0
+		int (*p)(int, int);
+""-	CHAR	0
+	l
 
 # File marks:
-'0  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+'0  5  18  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/variadic_functions.h
+'1  35  0  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/3-print_all.c
+'2  1  0  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/variadic_functions.h
+'3  4  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-op_functions.c
+'4  15  4  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+'5  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+'6  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+'7  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
 
 # Jumplist (newest first):
+-'  5  18  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/variadic_functions.h
+-'  1  0  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/variadic_functions.h
+-'  35  0  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/3-print_all.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0F-variadic_functions/3-print_all.c
+-'  4  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-op_functions.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-get_op_func.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-main.c
+-'  15  4  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
 -'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  15  4  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  4  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-op_functions.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-get_op_func.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-main.c
+-'  15  4  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  15  4  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  1  0  ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
+-'  4  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-op_functions.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-get_op_func.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-main.c
+-'  15  4  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+-'  1  0  ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+-'  2  0  ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
 
 # History of marks within files (newest to oldest):
+
+> ~/holbertonschool-low_level_programming/0x0F-variadic_functions/variadic_functions.h
+	"	5	18
+	.	5	18
+	+	3	0
+	+	5	18
+
+> ~/holbertonschool-low_level_programming/0x0F-variadic_functions/3-print_all.c
+	"	35	0
+	^	4	31
+	.	4	30
+	+	2	0
+	+	4	30
+
+> ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-main.c
+	"	25	13
+	^	33	14
+	.	33	13
+	+	30	0
+	+	16	0
+	+	16	20
+	+	33	13
+
+> ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-get_op_func.c
+	"	31	0
+
+> ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-op_functions.c
+	"	4	0
+
+> ~/holbertonschool-low_level_programming/0x0E-function_pointers/3-calc.h
+	"	19	1
+
+> ~/holbertonschool-low_level_programming/0x06-pointers_arrays_strings/0-memset.c
+	"	15	4
+
+> ~/holbertonschool-low_level_programming/0x00-hello_world/main.c
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/holbertonschool-low_level_programming/0x00-hello_world/1-compiler
+	"	2	0
 
 > ~/holberton-system_engineering-devops/0x00-shell_basics/0-current_working_directory
 	"	1	0

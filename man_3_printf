@@ -1,0 +1,9 @@
+NAME
+	printf - prints the character(s)
+SYNOPSIS
+	#include "holberton.h"
+	int _printf(const char *format, ...);
+DESCRIPTION
+	The printf() function prints output of a string, character, or integer. The printf function is able to print a string in quotes. If the string has a '%' it looks to the following character. If it has a c it will print a char variable, if it is a s it will print a string variable, if it is a i it will print an integer value, if it is a d it will print a integer.
+RETURN
+	The function will returen the number of characters printed. If unsuccessful the function will return null.

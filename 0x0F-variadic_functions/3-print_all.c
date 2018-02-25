@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
 /**
  * _intprint - print integer
@@ -20,12 +19,11 @@ void _stringprint(va_list fill)
 {
 	char *copy = va_arg(fill, char *);
 
-	if (copy != NULL)
+	if (copy == NULL)
 	{
-		printf("%s", copy);
-		return;
+		copy = "(nil)";
 	}
-	printf("nil");
+	printf("%s", copy);
 }
 /**
  * _floatprint - print float
@@ -58,8 +56,7 @@ void print_all(const char * const format, ...)
 		{"s", _stringprint},
 		{"f", _floatprint},
 		{"c", _charprint},
-		{NULL, NULL}
-	};
+		{NULL, NULL} };
 
 	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
@@ -67,7 +64,7 @@ void print_all(const char * const format, ...)
 		x = 0;
 		while (arr[x].ch != NULL)
 		{
-			if (*arr[x].ch == format[i])
+			if (arr[x].ch[0] == format[i])
 			{
 				printf("%s", seperator);
 				arr[x].f(args);

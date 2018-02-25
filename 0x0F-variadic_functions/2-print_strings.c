@@ -26,8 +26,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (conversion == NULL)
 			printf("(nil)");
-
-		printf("%s", conversion);
+		else
+			printf("%s", conversion);
 
 		if (i != n - 1 && separator != NULL)
 			printf("%s", separator);

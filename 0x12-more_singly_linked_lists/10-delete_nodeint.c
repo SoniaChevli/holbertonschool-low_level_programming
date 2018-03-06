@@ -27,7 +27,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	for (count = 0; count != index - 1 && before != NULL; count++)
 		before = before->next;
-
+	if (count != index - 1)
+		return (-1);
 	for (count = 0; count != index && tmp != NULL; count++)
 		tmp = tmp->next;
 

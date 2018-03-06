@@ -22,14 +22,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		before = before->next;
 		count++;
 	}
-	count = 0;
-	if (before == NULL)
+	if (before == NULL || count != idx - 1)
 		return (0);
+	count = 0;
 	while (count != idx && place != NULL)
 	{
 		place = place->next;
 		count++;
 	}
+	if (count != idx)
+		return (0);
 
 	new = malloc(sizeof(listint_t));
 

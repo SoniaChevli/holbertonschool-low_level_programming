@@ -1,0 +1,13 @@
+#File I/O
+* the objective of this assignment is to learn to create, open, read, and write files
+### Requirements
+* gcc 4.8.4
+* Ubuntu 14.04 LTS
+## 0-read_textfile.c
+* function that reads a text file and prints it to the POSIX standard output
+## 1-create_file.c
+* function that creates a file
+## 2-append_text_to_file.c
+* function that appends a text at the end of a file
+## 3-cp.c
+* program that copies the content of a file to another file

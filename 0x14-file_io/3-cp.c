@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	fdto = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	if (fdto == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s, followed by a new line, on the POSIX standard error\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	if (fdfrom == -1)

@@ -31,8 +31,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fdto = open(argv[2], O_RDWR);
-
+	fdto = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
+	if (fdto == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s, followed by a new line, on the POSIX standard error\n", argv[2]);
+		exit(99);
+	}
 	if (fdfrom == -1)
 		return (-1);
 
@@ -46,6 +50,13 @@ int main(int argc, char *argv[])
 	close(fdfrom);
 
 	close(fdto);
-
+	if (!close(fdfrom))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdfrom);
+	}
+	if (!close(fdto))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdto);
+	}
 	return (0);
 }

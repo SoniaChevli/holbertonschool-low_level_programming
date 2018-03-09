@@ -1,6 +1,10 @@
 #include "holberton.h"
 /**
- *copy_file - copies the content of a file to another file
+ *main - copies the content of a file to another file
+ *@argc: number of arguments
+ *@argv: pointer to the arguments
+ *
+ *Return: 0 or -1.
  */
 
 int main(int argc, char *argv[])
@@ -15,7 +19,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]);
 		exit(97);
 	}
 
@@ -23,7 +27,7 @@ int main(int argc, char *argv[])
 	fdfrom = open(argv[1], O_RDWR);
 	if (fdfrom == -1)
 	{
-		dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
@@ -37,7 +41,7 @@ int main(int argc, char *argv[])
 
 	x = read(fdfrom, buf, 1024);
 
-	write (fdto, buf, x);
+	write(fdto, buf, x);
 
 	close(fdfrom);
 

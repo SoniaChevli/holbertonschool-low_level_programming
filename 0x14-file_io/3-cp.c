@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -19,15 +18,16 @@ int main(int argc, char *argv[])
 	char *buf;
 	char *fromfile, *tofile;
 
-	buf = malloc(sizeof(char) * 1024);
-	if (buf == NULL)
-		return (-1);
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		free(buf);
 		exit(97);
 	}
+
+	buf = malloc(sizeof(char) * 1024);
+        if (buf == NULL)
+                return (-1);
 
 	fromfile = argv[1];
 	tofile = argv[2];
@@ -76,17 +76,12 @@ int main(int argc, char *argv[])
 	}
 
 
-	close(fdfrom);
-
-
 	if (close(fdfrom) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdfrom);
 		free(buf);
 		exit(100);
 	}
-
-	close(fdto);
 
 	if (close(fdto) == -1)
 	{

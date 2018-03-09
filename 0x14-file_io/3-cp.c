@@ -50,13 +50,15 @@ int main(int argc, char *argv[])
 	close(fdfrom);
 
 	close(fdto);
-	if (!close(fdfrom))
+	if (close(fdfrom) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdfrom);
+		exit(100);
 	}
-	if (!close(fdto))
+	if (close(fdto) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdto);
+		exit(100);
 	}
 	return (0);
 }

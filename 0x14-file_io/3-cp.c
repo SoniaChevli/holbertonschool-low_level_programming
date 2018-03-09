@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	{
 		if (copyfrom == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", tofile);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fromfile);
 			free(buf);
 			exit(98);
 		}
@@ -63,14 +63,14 @@ int main(int argc, char *argv[])
 	       copyto = write(fdto, buf, copyfrom);
 		if (copyto == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fromfile);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", tofile);
 			free(buf);
 			exit(99);
 		}
 	}
 	if (copyfrom == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", tofile);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fromfile);
 		free(buf);
 		exit(98);
 	}

@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fdfrom, fdto, x;
+	int fdfrom, fdto, copyto, copyfrom;
 	char buf[1024];
 	char *fromfile, *tofile;
 
@@ -17,14 +17,14 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
 	fromfile = argv[1];
 	tofile = argv[2];
 
-	fdfrom = open(argv[1], O_RDONLY);
+	fdfrom = open(fromfile, O_RDONLY);
 
 	if (fdfrom == -1)
 	{
@@ -41,32 +41,38 @@ int main(int argc, char *argv[])
 	}
 
 
-	while ((x = read(fdfrom, buf, 1024)) > 0)
+	while ((copyfrom = read(fdfrom, buf, 1024)) > 0)
 	{
-		if (x == -1)
+		if (copyfrom == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", tofile);
 			exit(98);
 		}
 
-		x = write(fdto, buf, x);
-		if (x == -1)
+	       copyto = write(fdto, buf, copyfrom);
+		if (copyto == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fromfile);
 			exit(99);
 		}
 	}
+	if (copyfrom == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", tofile);
+		exit(98);
+	}
 
 
 	close(fdfrom);
 
-	close(fdto);
 
 	if (close(fdfrom) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdfrom);
 		exit(100);
 	}
+
+	close(fdto);
 
 	if (close(fdto) == -1)
 	{

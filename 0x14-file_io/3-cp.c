@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
 	}
 
 	buf = malloc(sizeof(char) * 1024);
-        if (buf == NULL)
-                return (-1);
+	if (buf == NULL)
+		return (-1);
 
 	fromfile = argv[1];
 	tofile = argv[2];
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-	       copyto = write(fdto, buf, copyfrom);
+		copyto = write(fdto, buf, copyfrom);
 		if (copyto == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", tofile);

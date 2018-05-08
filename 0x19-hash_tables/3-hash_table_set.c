@@ -18,16 +18,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	head = ht->array[index];
 
 
-	insert = malloc(sizeof(hash_node_t) * (strlen(key) + 1) +\
-			(strlen(value) + 1));
-	if (insert == NULL)
+	insert = malloc(sizeof(hash_node_t));
+	if (insert == NULL || key == NULL || value == NULL)
 		return (0);
 
 	insert->key = strdup(key);
 	insert->value = strdup(value);
-
+	if (head == NULL)
+	{
+		head = insert;
+		return (1);
+	}
 	insert->next = head;
 	head = insert;
-
 	return (1);
 }

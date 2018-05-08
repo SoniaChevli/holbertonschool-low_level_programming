@@ -16,16 +16,17 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	index = key_index((const unsigned char *)key, ht->size);
 
+	if (ht->array[index] == NULL)
+		return (NULL);
+
 	keyfinder = ht->array[index];
 
 	while (keyfinder)
 	{
 
 		if (strcmp(keyfinder->key, key) == 0)
-		{
-
 			return (keyfinder->value);
-		}
+
 		keyfinder = keyfinder->next;
 	}
 

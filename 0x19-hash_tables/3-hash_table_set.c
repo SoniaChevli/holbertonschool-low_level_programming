@@ -40,6 +40,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	new->key = strdup(key);
 	new->value = strdup(value);
+	new->next = NULL;
 
 	if (ht->array[index] == NULL)
 	{

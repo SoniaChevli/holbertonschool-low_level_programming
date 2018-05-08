@@ -33,8 +33,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 
-	new = malloc(sizeof(hash_node_t) +
-		     (strlen(key) + 1) + (strlen(value) + 1));
+	new = malloc(sizeof(hash_node_t));
+
 	if (new == NULL)
 		return (0);
 
@@ -47,7 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 
-	new->next = head;
+	new->next = tmp;
 	ht->array[index] = new;
 	return (1);
 }

@@ -19,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (boo == 1)
 				printf(", ");
-			printf("%s: %s", tmp->key, tmp->value);
+			printf("'%s': '%s'", tmp->key, tmp->value);
 			boo = 1;
 			tmp = tmp->next;
 		}

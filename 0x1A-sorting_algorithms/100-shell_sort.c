@@ -17,19 +17,27 @@ void _swap(int *i, int *j)
  */
 void shell_sort(int *array, size_t size)
 {
-	int gap[] = {1, 4, 13, 40, 121};
-	int x = 4;
+	unsigned int gap = 0;
+	unsigned int hold;
 	unsigned int i;
 	unsigned int j;
 	int flag = 0;
 
-/* every time gap is changed */
-	for (x = 4; x >= 0; x--)
+/* calculate gap */
+	while (gap < size)
+	{
+		hold = gap;
+		gap = gap * 3 + 1;
+	}
+
+	gap = hold;
+
+	while (gap > 0)
 	{
 
 		for (i = 0; array[i] != '\0'; i++)
 		{
-			for (j = i; array[i] <= array[j] && j + gap[x] < size; j += gap[x])
+			for (j = i; array[i] <= array[j] && j + gap < size; j += gap)
 			{
 			}
 			if (array[i] > array[j])
@@ -44,5 +52,6 @@ void shell_sort(int *array, size_t size)
 			print_array(array, size);
 			flag = 0;
 		}
+		gap = (gap - 1) / 3;
 	}
 }

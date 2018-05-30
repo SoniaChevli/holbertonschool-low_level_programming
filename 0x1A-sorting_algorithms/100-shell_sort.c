@@ -19,9 +19,12 @@ void shell_sort(int *array, size_t size)
 {
 	unsigned int gap = 0;
 	unsigned int hold;
-	unsigned int i;
+	int i;
 	unsigned int j;
-	int flag = 0;
+
+
+	if (size <= 1 || array == NULL)
+		return;
 
 /* calculate gap */
 	while (gap < size)
@@ -35,23 +38,21 @@ void shell_sort(int *array, size_t size)
 	while (gap > 0)
 	{
 
-		for (i = 0; array[i] != '\0' || i < gap; i++)
+		for (i = 0; i < (int) size || i < (int) gap; i++)
 		{
 			for (j = i; array[i] <= array[j] && j + gap < size; j += gap)
 			{
 			}
 			if (array[i] > array[j])
 			{
-				flag = 1;
 				_swap(&array[i], &array[j]);
 				i--;
 			}
 		}
-		if (flag == 1)
-		{
+
 			print_array(array, size);
-			flag = 0;
-		}
+
+
 		gap = (gap - 1) / 3;
 	}
 }

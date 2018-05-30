@@ -105,7 +105,7 @@ void counting_sort(int *array, size_t size)
 	unsigned int newsize;
 	int *newarray;
 
-	if (array == NULL || size <= 1)
+	if (*array == NULL || array == NULL || size <= 1)
 		return;
 
 	newsize = array[0];

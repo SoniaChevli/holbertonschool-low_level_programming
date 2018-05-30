@@ -4,7 +4,7 @@
  * finalarray - final phase of count sort
  * @array: array to sort
  * @newarray: array of ranges
- * @size: size of array
+ * @size: array size
  */
 void finalarray(int *array, int *newarray, size_t size)
 {
@@ -79,6 +79,7 @@ void addarray(int *newarray, int newsize)
  * countarray - increments newarray to hold ranges
  * @array: array to count
  * @newarray: array of ranges
+ * @size: array size
  */
 void countarray(int *array, int *newarray, size_t size)
 {

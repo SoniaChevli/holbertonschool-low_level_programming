@@ -1,11 +1,7 @@
-#compiler to be used
 CC = gcc
-#the c files to be used
 SR = main.c holberton.c
-# the object files to be used
 OBJ = $(SR:.c=.o)
-# name of executable
 NAME = holberton
 
-all: $(OBJ) # object files
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)

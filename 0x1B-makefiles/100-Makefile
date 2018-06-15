@@ -1,7 +1,7 @@
 # compile flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
 #compiler
-CC = gcc $(CFLAGS)
+CC = gcc
 # all c files
 SRC = holberton.c main.c
 # all object files
@@ -12,7 +12,7 @@ NAME = holberton
 RM = rm -f
 
 
-all: $(OBJ)
+all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:

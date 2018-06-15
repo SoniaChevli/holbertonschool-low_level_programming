@@ -1,0 +1,26 @@
+# compile flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+#compiler
+CC = gcc $(CFLAGS)
+# all c files
+SRC = holberton.c main.c
+# all object files
+OBJ = $(SRC:.c=.o)
+# name of executable
+NAME = holberton
+# delete files
+RM = rm -f
+
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean all
+
+re: oclean all

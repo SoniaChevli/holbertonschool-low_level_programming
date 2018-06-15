@@ -1,11 +1,11 @@
 #compiler to be used
-CC=gcc
+CC = gcc
 #the c files to be used
-SR=main.c holberton.c
+SR = main.c holberton.c
 # the object files to be used
-OBJ=$(SR:.c=.o)
+OBJ = $(SR:.c=.o)
 # name of executable
-NAME=holberton
+NAME = holberton
 
-all: $(OBJ)
+all: $(OBJ) # object files
 	$(CC) $(OBJ) -o $(NAME)

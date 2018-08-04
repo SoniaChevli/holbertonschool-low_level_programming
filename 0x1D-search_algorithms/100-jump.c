@@ -53,6 +53,7 @@ int jump_search(int *array, size_t size, int value)
 		index += jumper;
 	}
 
-	printf("Value found between indexes [%u] and [%u]\n", index - jumper, index);
+	printf("Value found between indexes [%u] and [%u]\n",
+	       index - jumper, index);
 	return (jump_linear_search(array, (index - jumper), index, value));
 }
